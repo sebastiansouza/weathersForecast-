@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Previsão do Tempo</title>
+</head>
+
+<body>
+    <div class="big-box">
+        <input class="input-city" type="text" placeholder="Digite o nome da cidade">
+        <button class="button-seach" onclick="clickButton()">
+            <img class="img-seach" src="https://www.svgrepo.com/show/488200/find.svg" alt="buscar">
+        </button>
+
+        <div class="box-middle">
+
+            <h2 class="title-city" id="city">Pesquise sua cidade</h2>
+            <P class="temperature-max" id="temperature">Temperatura Atual</P>
+            <p class="temperature-min"></p>
+            <div class="box-litle">
+                <img class="weather-icon" id="weatherIcon" src="https://openweathermap.org/img/wn/04n.png"
+                    alt="icone-info-tempo">
+                <p class="weather-description" id="weatherDescription">Descrição</p>
+            </div>
+            <p class="humidity" id="humidity">Umidade do ar</p>
+
+        </div>
+            Feito por: Sebastian Souza
+    </div>
+  
+</body>
+
+</html>
