@@ -97,3 +97,10 @@ body {
 .humidity {
     color: #ffffff;
 }
+
+.creditos {
+    color: #ffffff;
+    font-size: 6px;
+    font-style: italic;
+    float: right;
+}
