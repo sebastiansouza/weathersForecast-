@@ -39,7 +39,6 @@ body {
     color: #ffffff;
     width: calc(100% - 70px);
 }
-
 .button-seach {
     border: none;
     outline: none;
@@ -49,10 +48,6 @@ body {
     cursor: pointer;
     float: right;
 
-}
-.button-seach:hover {
-    opacity: 0.8;
-    background-color: #ece3e32b;
 }
 
 
