@@ -14,7 +14,7 @@
  }
 
 // Chama a função ao carregar a página
-window.onload = setRandomBackground;
+//window.onload = setRandomBackground;
 
 
 // Função para obter a previsão do tempo.
@@ -25,7 +25,7 @@ const key = `f5bf7dba1710e8f7558a1ffeae020016`
 
 function putDataScreen(data) {
 
-    
+
     document.querySelector(".title-city").innerHTML = "Tempo em " + data.name
     document.querySelector(".temperature-max").innerHTML = "Max " +  Math.floor(data.main.temp_max) + "°C"
     document.querySelector(".weather-description").innerHTML = data.weather[0].description
@@ -34,11 +34,16 @@ function putDataScreen(data) {
     document.querySelector(".temperature-min").innerHTML = "Min " +  Math.floor(data.main.temp_min) + "°C"
 
 
+
+
 }
+
+
+
 
 async function searchCity(city) {
     let data = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + 
-    city + 
+    city + ",BR" +
     "&appid=" + 
     key + 
     "&lang=pt_br" +
@@ -46,19 +51,29 @@ async function searchCity(city) {
     )
     .then(resposta => resposta.json())
 
+    if (data.cod === "404") {
+
+        alert("Digite uma cidade brasileira válida")
+    }
+        else {
 
 
    putDataScreen(data)
 
-
+        }
 }
 
 function clickButton() {
     const city = document.querySelector(".input-city").value
-    const code = document.querySelector(".state").value
+
+    if (city === "" ){
+        document.querySelector(".title-city").innerHTML = "Por favor, escolha alguma cidade"
+
+    } else {
 
 
 
     searchCity(city)
+    }
 
 }
