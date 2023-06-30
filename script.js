@@ -14,7 +14,11 @@
  }
 
 // Chama a função ao carregar a página
-//window.onload = setRandomBackground;
+window.onload = setRandomBackground;
+
+
+
+
 
 
 // Função para obter a previsão do tempo.
