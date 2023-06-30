@@ -14,7 +14,7 @@
  }
 
 // Chama a função ao carregar a página
-//window.onload = setRandomBackground;
+window.onload = setRandomBackground;
 
 
 
