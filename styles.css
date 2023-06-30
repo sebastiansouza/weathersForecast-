@@ -85,16 +85,11 @@ body {
     color: #ffffff;
     margin-top: 20px;
 }
-.temperature-min {
-    font-size: 20px;
-    color: #ffffff;
-    margin-top: 20px;
-}
+.alert {
+    font-size: 10px;
+    color: red;
+    margin-top: 2px;
 
-.timezone {
-    font-size: 20px;
-    color: #ffffff;
-    margin-top: 20px;
 }
 .box-litle {
     display: flex;

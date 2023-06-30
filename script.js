@@ -16,6 +16,17 @@
 // Chama a função ao carregar a página
 window.onload = setRandomBackground;
 
+document.addEventListener('keypress', function(event){
+
+        if (event.key === 'Enter') {
+
+            clickButton ()
+        }
+ 
+
+
+}) 
+
 
 
 
@@ -31,11 +42,10 @@ function putDataScreen(data) {
 
 
     document.querySelector(".title-city").innerHTML = "Tempo em " + data.name
-    document.querySelector(".temperature-max").innerHTML = "Max " +  Math.floor(data.main.temp_max) + "°C"
+    document.querySelector(".temperature-max").innerHTML = "Temperatura atual " +  Math.floor(data.main.temp_max) + "°C"
     document.querySelector(".weather-description").innerHTML = data.weather[0].description
     document.querySelector(".weather-icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
     document.querySelector(".humidity").innerHTML = "Umidade do ar: " + data.main.humidity + "%"
-    document.querySelector(".temperature-min").innerHTML = "Min " +  Math.floor(data.main.temp_min) + "°C"
    
 
 
@@ -67,7 +77,7 @@ async function searchCity(city) {
 
        
     } if (data.cod === "404") {
-        alert("Digite uma cidade brasileira válida")
+        document.querySelector(".alert").innerHTML = "Cidade não encontrada!"
     }
         else {
 
@@ -83,7 +93,7 @@ function clickButton() {
     const city = document.querySelector(".input-city").value
 
     if (city === "" ){
-        document.querySelector(".title-city").innerHTML = "Por favor, escolha alguma cidade"
+        document.querySelector(".alert").innerHTML = "Você não digitou nenhuma cidade"
 
     } else {
 
