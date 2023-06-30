@@ -14,7 +14,7 @@
  }
 
 // Chama a função ao carregar a página
-window.onload = setRandomBackground;
+//window.onload = setRandomBackground;
 
 
 
@@ -36,8 +36,7 @@ function putDataScreen(data) {
     document.querySelector(".weather-icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png"
     document.querySelector(".humidity").innerHTML = "Umidade do ar: " + data.main.humidity + "%"
     document.querySelector(".temperature-min").innerHTML = "Min " +  Math.floor(data.main.temp_min) + "°C"
-
-
+   
 
 
 }
@@ -57,6 +56,17 @@ async function searchCity(city) {
 
     if (data.cod === "404") {
 
+    data = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + 
+    city +
+    "&appid=" + 
+    key + 
+    "&lang=pt_br" +
+    "&units=metric"
+    )
+    .then(resposta => resposta.json())
+
+       
+    } if (data.cod === "404") {
         alert("Digite uma cidade brasileira válida")
     }
         else {
@@ -65,6 +75,8 @@ async function searchCity(city) {
    putDataScreen(data)
 
         }
+
+        
 }
 
 function clickButton() {
@@ -81,3 +93,32 @@ function clickButton() {
     }
 
 }
+
+
+// função das horas
+
+
+function timeLocal () {
+
+    let dateToday = new Date();
+    let hr = dateToday.getHours();
+    let min = dateToday.getMinutes();
+    let s = dateToday.getSeconds();
+
+    if (hr < 10) hr = '0' + hr;
+
+    if (min < 10) min = '0' + min;
+
+    if (s < 10) s = '0' + s;
+
+
+     document.querySelector(".hours").innerHTML = hr
+     document.querySelector(".minutes").innerHTML = min
+     document.querySelector(".seconds").innerHTML = s
+      
+    }
+
+
+setInterval (timeLocal, 1000)
+
+
