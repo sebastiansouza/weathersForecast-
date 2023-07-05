@@ -191,7 +191,7 @@ h3 {
     font-size: 8px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 350px) {
     .clock {
         display: flex;
         position: fixed;
