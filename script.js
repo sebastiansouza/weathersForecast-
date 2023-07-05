@@ -200,11 +200,11 @@ function setBackground(data) {
         document.body.classList.add("background-image");
         document.body.style.backgroundImage = "url('https://images.pexels.com/photos/7386650/pexels-photo-7386650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
     }
-    if (idBg == '804' && iconBg == "04d") {
+    if (idBg == '804' || idBg == '803' && iconBg == "04d") {
         document.body.classList.add("background-image");
         document.body.style.backgroundImage = "url('https://images.pexels.com/photos/6398587/pexels-photo-6398587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
     }
-    if (idBg == '804' && iconBg == "04n") {
+    if (idBg == '804' || idBg == '803' && iconBg == "04n") {
         document.body.classList.add("background-image");
         document.body.style.backgroundImage = "url('https://images.pexels.com/photos/16790142/pexels-photo-16790142/free-photo-of-istambul-construcao-predio-edificio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
     } 
@@ -216,7 +216,8 @@ function setBackground(data) {
         document.body.classList.add("background-image");
         document.body.style.backgroundImage = "url('https://images.pexels.com/photos/1437493/pexels-photo-1437493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
     } 
-    
+    console.log(idBg)
+    console.log(iconBg)
 }
 
 // Função para obter a imagem aleatória da API do Unsplash e definir como plano de fundo
