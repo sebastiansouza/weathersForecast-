@@ -213,6 +213,7 @@ h3 {
     .big-box {
         width: 370px;
     }
+   
 
 }
 
@@ -223,6 +224,16 @@ h3 {
 
         margin-top: 100px;
     }
+    
 
 
+}
+
+@media screen and (max-width: 450px) {
+    .input-city {
+        padding: 0.2rem;
+    }
+    .button-search {
+        width: auto;
+    }
 }

@@ -200,14 +200,14 @@ function setBackground(data) {
         document.body.classList.add("background-image");
         document.body.style.backgroundImage = "url('https://images.pexels.com/photos/7386650/pexels-photo-7386650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
     }
-    if (idBg == '804' || idBg == '803' && iconBg == "04d") {
+    if (idBg == '803' || idBg == '804' && iconBg == "04d") {
         document.body.classList.add("background-image");
         document.body.style.backgroundImage = "url('https://images.pexels.com/photos/6398587/pexels-photo-6398587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
     }
     if (idBg == '804' || idBg == '803' && iconBg == "04n") {
         document.body.classList.add("background-image");
         document.body.style.backgroundImage = "url('https://images.pexels.com/photos/16790142/pexels-photo-16790142/free-photo-of-istambul-construcao-predio-edificio.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
-    } 
+    }   
     if (idBg == '701' && iconBg == "50d" || iconBg == "50n") {
         document.body.classList.add("background-image");
         document.body.style.backgroundImage = "url('https://images.pexels.com/photos/158672/fog-forest-mountain-world-clouds-158672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')";
